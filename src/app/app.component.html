@@ -1,2 +1,8 @@
-<scroll-anchor-nx-welcome></scroll-anchor-nx-welcome>
+<header>
+  <nav>
+    @for (item of items; track item){
+      <a [routerLink]="item.link" [fragment]="item.fragment">{{ item.label }}</a>
+    }
+  </nav>
+</header>
 <router-outlet></router-outlet>
